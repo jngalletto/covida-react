@@ -1,11 +1,19 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import AppAppBar from '../src/views/AppAppBar';
+
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  }
+}));
 
 function App() {
   return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <div className={useStyles.root}>
+      <AppAppBar />
+    </div>
   );
 }
 

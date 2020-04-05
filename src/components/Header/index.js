@@ -13,7 +13,7 @@ class Header extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">LINK 1</a>
+              <a className="nav-link" href="#" aria-disabled="true">LINK 1</a>
             </li>
           </ul>
           <button className="btn btn-outline-success my-2 my-sm-0 helpButton" type="submit">Search</button>

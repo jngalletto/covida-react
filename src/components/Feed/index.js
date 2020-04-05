@@ -28,16 +28,14 @@ class Feed extends Component {
   renderProjects(){
     const { projects } = this.state;
     if(projects){
-      return projects.map(project => <ProjectCard project={project}/>)
+      return projects.map(project => <ProjectCard key={project._id} project={project}/>)
     }
   }
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          { this.renderProjects() }
-        </div>
+      <div className="row">
+        { this.renderProjects() }
       </div>
     );
   }

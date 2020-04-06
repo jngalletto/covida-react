@@ -12,8 +12,8 @@ const DropdownZone = (props) => {
   }
 
   return (
-    <select className="form-control">
-      <option>Ubicación</option>
+    <select className="form-control" onChange={ (e) => props.onChange(e.target.value) }>
+      <option value='null'>Ubicación</option>
       { renderZones() }
     </select>
   );

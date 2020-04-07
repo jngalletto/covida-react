@@ -19,7 +19,13 @@ const SectionContainer = (props) => {
     const { sections } = props;
     if (sections) {
       return sections.map(section => (
-        <button key={section._id} type="button" className="btn btn-outline-light section-container" style={ setDynamicColor(section.color) }>
+        <button 
+          key={section._id} 
+          type="button" 
+          className="btn btn-outline-light section-container" 
+          style={ setDynamicColor(section.color) }
+          onClick={ () => props.onChange(section._id) }
+        >
           <FontAwesomeIcon icon={section.icon} /> {section.name}
         </button>
       ))

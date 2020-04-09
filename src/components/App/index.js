@@ -1,47 +1,26 @@
-import React, {Component} from 'react';
-import Header from "../Header";
-import Feed from "../Feed";
-import FilterBar from "../FilterBar";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from '../Home';
+import Feed from '../Feed';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      section: null,
-      zone: null
-    }
-  }
-
-  onChangeZone = (zone) =>  {
-    this.setState({
-      zone
-    })
-  }
-
-  onChangeSection = (section) =>  {
-    this.setState({
-      section
-    })
-  }
-
-  render () {
-    const { section, zone } = this.state;
-    return (
+export default function App() {
+  return (
+    <Router>
       <div>
-        <Header />
-        <div className="container">
-          <FilterBar 
-            onChangeZone= { this.onChangeZone }
-            onChangeSection={ this.onChangeSection }
-          />
-          <Feed 
-            section={ section }
-            zone={ zone }
-          />
-        </div>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/test">
+            <Feed />
+          </Route>
+        </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
 }
-
-export default App;

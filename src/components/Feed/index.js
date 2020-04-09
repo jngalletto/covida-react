@@ -1,49 +1,44 @@
-import React, { Component } from "react";
-import equal from 'fast-deep-equal'
-import ProjectCard from '../ProjectCard';
-import { fetchFiltered } from '../../api/project';
-
-import "./styles.css";
+import React, {Component} from 'react';
+import Header from "../Header";
+import ProjectsTable from "../ProjectsTable";
+import FilterBar from "../FilterBar";
 
 class Feed extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      projects: [],
+      section: null,
+      zone: null
     }
   }
 
-  componentDidMount(){
-    this.getAllProjects();
+  onChangeZone = (zone) =>  {
+    this.setState({
+      zone
+    })
   }
 
-  componentDidUpdate(prevProps) {
-    if(!equal(this.props.zone, prevProps.zone)) {
-      this.getAllProjects();
-    } 
+  onChangeSection = (section) =>  {
+    this.setState({
+      section
+    })
   }
 
-  getAllProjects() {
-    const { section, zone } = this.props;
-    fetchFiltered(zone, section)
-      .then(response => {
-        this.setState({
-          projects: response.data
-        })
-      })
-  }
-
-  renderProjects(){
-    const { projects } = this.state;
-    if(projects){
-      return projects.map(project => <ProjectCard key={project._id} project={project}/>)
-    }
-  }
-
-  render() {
+  render () {
+    const { section, zone } = this.state;
     return (
-      <div className="row">
-        { this.renderProjects() }
+      <div>
+        <Header />
+        <div className="container">
+          <FilterBar 
+            onChangeZone= { this.onChangeZone }
+            onChangeSection={ this.onChangeSection }
+          />
+          <ProjectsTable 
+            section={ section }
+            zone={ zone }
+          />
+        </div>
       </div>
     );
   }

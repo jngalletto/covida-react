@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import Header from "../Header";
+import Header from '../Header';
 import ProjectsTable from "../ProjectsTable";
-import FilterBar from "../FilterBar";
+import ProjectDetail from '../ProjectDetail';
+import FilterBar from '../FilterBar';
 
 class Feed extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      displayProjectDetail: false,
+      project: null,
       section: null,
       zone: null
     }
@@ -24,22 +27,43 @@ class Feed extends Component {
     })
   }
 
+  onClickCard = (project) => {
+    this.setState({
+      displayProjectDetail: true,
+      project
+    })
+  }
+
+  onCloseDetail = () => {
+    this.setState({
+      displayProjectDetail: false
+    })
+  }
+
   render () {
-    const { section, zone } = this.state;
+    const { displayProjectDetail, project, section, zone } = this.state;
     return (
-      <div>
-        <Header />
-        <div className="container">
-          <FilterBar 
-            onChangeZone= { this.onChangeZone }
-            onChangeSection={ this.onChangeSection }
-          />
-          <ProjectsTable 
-            section={ section }
-            zone={ zone }
-          />
+      <>
+        <div>
+          <Header />
+          <div className="container">
+            <FilterBar 
+              onChangeZone= { this.onChangeZone }
+              onChangeSection={ this.onChangeSection }
+            />
+            <ProjectsTable 
+              onClickCard= { this.onClickCard }
+              section={ section }
+              zone={ zone }
+            />
+          </div>
         </div>
-      </div>
+        <ProjectDetail 
+          display={ displayProjectDetail }
+          onClose={ this.onCloseDetail }
+          project={ project }
+        />
+      </>
     );
   }
 }

@@ -9,7 +9,7 @@ class ProjectsTable extends Component {
   constructor(props){
     super(props);
     this.state = {
-      projects: [],
+      projects: []
     }
   }
 
@@ -35,8 +35,13 @@ class ProjectsTable extends Component {
 
   renderProjects(){
     const { projects } = this.state;
+    const { onClickCard } = this.props;
     if(projects){
-      return projects.map(project => <ProjectCard key={project._id} project={project}/>)
+      return projects.map(project => <ProjectCard 
+        key={project._id} 
+        onClick={ onClickCard } 
+        project={project}
+      />)
     }
   }
 

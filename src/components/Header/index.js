@@ -46,7 +46,7 @@ class Header extends Component {
       </nav>
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-md-8">
+          <div className="col-sm-12 col-md-8">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><Link to="/">Home</Link></li>
@@ -54,7 +54,7 @@ class Header extends Component {
               </ol>
             </nav>
           </div>
-          <div className="col-xs-12 col-md-4">
+          <div className="col-sm-12 col-md-4">
             <a className="btn btn-main-action"><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
           </div>
         </div>

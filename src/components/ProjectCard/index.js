@@ -5,7 +5,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Fade from 'react-reveal/Fade';
 
-
 import "./styles.css";
 
 library.add(fas, faFacebookF, faTwitter, faWhatsapp, faInstagram, faLinkedin );

@@ -1,0 +1,55 @@
+.action-container {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.btn-action {
+    background: #FFFFFF;
+    border: 1px solid #0080FF;
+    color: #0080FF;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    margin-left: 4rem;
+    padding: 1rem 3rem;
+}
+
+.logo-container {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.logo-font {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+}
+
+.main-content {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 80px;
+    line-height: 112%;    
+    letter-spacing: -0.03em;
+}
+
+.sub-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    margin: auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+

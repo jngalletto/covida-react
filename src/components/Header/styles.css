@@ -13,3 +13,20 @@
   width: 100px;
   font-weight: bold !important;
 }
+
+.link-container {
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.link-container .nav-link {
+  color: #0080FF !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+}

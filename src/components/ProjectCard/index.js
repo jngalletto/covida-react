@@ -40,7 +40,6 @@ const ProjectCard = (props) => {
   return (
     <Fade bottom>
       <div className="card card-container-co" onClick={() => {console.log("Render card: ", project._id)}}>
-        { renderSocialIcons() }
         <img src={project.image} className="card-img-top card-image-co" alt="..." />
         <div className="card-body">
           <h4 className="card-title">{ project.name }</h4>

@@ -44,13 +44,13 @@ class FilterBar extends Component {
     const { onChangeZone, onChangeSection } = this.props;
     return(
       <div className="row filter-bar">
-        <div className="col-xs-12 col-md-2">
+        <div className="col-sm-12 col-md-2">
           <DropdownZone 
             onChange={ onChangeZone }
             zones={zones}
           />
         </div>
-        <div className="col-xs-12 col-md-8">
+        <div className="col-sm-12 col-md-8">
           <SectionContainer 
             onChange={ onChangeSection }
             sections={sections}

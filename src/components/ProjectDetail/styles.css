@@ -1,0 +1,67 @@
+.modal-container {
+  background: rgba(54, 54, 54, 0.9);
+}
+
+.modal-container .modal-header {
+  border-bottom: none;
+}
+
+.modal-container .schedule-container p {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.modal-container .schedule-container svg {
+  margin-right: 5px;
+}
+
+.modal-container .contact-container {
+  margin-top: 1rem;
+}
+
+.modal-container .contact-container p{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.modal-container .contact-container svg {
+  margin-right: 5px;
+}
+
+.modal-container .contact-container h3{
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 49px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+}
+
+.modal-container .description-container{
+  margin-top: 1rem;
+}
+
+.modal-container .description-container p {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.share-container {
+}
+
+.social-icon {
+  margin: 5px;
+}

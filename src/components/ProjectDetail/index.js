@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Fade from 'react-reveal/Fade';
 
 import "./styles.css";
@@ -38,7 +38,7 @@ const ProjectDetail = (props) => {
     if (coordinates) {
       const splittedCoords = coordinates.split(",");
       return({
-        lat: splittedCoords[0], 
+        lat: splittedCoords[0],
         lng: splittedCoords[1]
       })
     }
@@ -95,8 +95,8 @@ const ProjectDetail = (props) => {
               {/* Map and image */}
               <div className="row col-sm-12">
                 <div className="col-sm-12 col-md-6">
-                  <Map 
-                    google={props.google} 
+                  <Map
+                    google={props.google}
                     zoom={13}
                     initialCenter={getCenterGMap(project)}
                   >

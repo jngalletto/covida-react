@@ -5,6 +5,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import ProjectForm from '../ProjectForm';
 
 import "./styles.css";
 
@@ -12,7 +13,23 @@ library.add(fas);
 
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayProjectForm: false
+    }
+  }
+
+  renderForm = () => {
+    this.setState({ displayProjectForm: true })
+  }
+
+  onCloseForm = () => {
+    this.setState({ displayProjectForm: false })
+  }
+
   render() {
+    const { displayProjectForm } = this.state;
     return (
       <>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -23,7 +40,7 @@ class Header extends Component {
 
         <div className="collapse navbar-collapse link-container" id="navbarSupportedContent">
           <div className="my-2 my-lg-0">
-            
+
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/">¿Cómo funciona?</Link>
@@ -55,12 +72,15 @@ class Header extends Component {
             </nav>
           </div>
           <div className="col-sm-12 col-md-4">
-            <a className="btn btn-main-action"><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
+            <a className="btn btn-main-action" onClick={this.renderForm}><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
           </div>
+          <ProjectForm
+            display={displayProjectForm}
+            onClose={this.onCloseForm}
+          />
         </div>
       </div>
     </>
-      
     );
   }
 }

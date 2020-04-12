@@ -7,7 +7,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import ProjectForm from '../ProjectForm';
 
-import "./styles.css";
+import "./styles.scss";
 
 library.add(fas);
 
@@ -33,7 +33,7 @@ class Header extends Component {
     return (
       <>
       <nav className="navbar navbar-expand-lg navbar-light">
-        <Link className="navbar-brand" to="/feed"><p className="logo-font">entretodos.org</p></Link>
+        <Link className="navbar-brand" to="/"><p className="logo-font">entretodos.org</p></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -2,27 +2,47 @@ import React from 'react';
 import {
   Link
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import ProjectsTable from "../ProjectsTable";
 
-import "./styles.css";
+import "./styles.scss";
+
+library.add(fas);
 
 const Home = () => {
   return (
-    <div className="container text-center">
-      <div className="col-sm-12 logo-container">
-        <p className="logo-font">entretodos.org</p>
-      </div>
-      <div className="col-sm-12">
-        <p className="main-content">Buscá entre cientos de iniciativas para ayudarnos entre todos.</p>
-      </div>
-      <div className="col-sm-12 action-container">
-        <Link className="btn btn-light btn-action" to="/feed">Necesito ayuda</Link>
-        <Link className="btn btn-light btn-action" to="/feed">Quiero ayudar</Link>
-      </div>
-      <div className="col-sm-12">
-        <p className="sub-text">Conectamos a personas y organizaciones para la ayuda mutua en el contexto de la emergencia sanitaria.</p>
-      </div>
+    <>
+      <div id="home-main" className="text-center home-section">
+        <div className="col-sm-12 logo-container">
+          <p className="logo-font">entretodos.org</p>
+        </div>
+        <div className="col-sm-12">
+          <p className="main-content">¿Cómo podemos ayudarnos?</p>
+        </div>
+        <div className="col-sm-12 action-container">
+          <Link className="btn btn-light btn-main-action btn-home" to="/feed">Necesito ayuda</Link>
+          <Link className="btn btn-light btn-main-action btn-home" to="/feed">Quiero ayudar</Link>
+        </div>
+        <div className="col-sm-12 sub-text-container">
+          <p className="sub-text">Conectamos a quienes necesitan ayuda con las organizaciones y personas que están ayudando.</p>
+        </div>
 
-    </div>
+        <div className="col-sm-12 action-recent-container">
+          <p className="sub-text">VER INICIATIVAS RECIENTES</p>
+          <FontAwesomeIcon icon="arrow-down" color="#A3C5CC" size="lg" />
+        </div>
+      </div>
+      <div className="home-section" style={{ paddingTop:20 }}>
+        <div className="container">
+          <ProjectsTable 
+            section={null}
+            zone={null}
+          />
+        </div>
+      </div>
+    </>
   )
 }
 

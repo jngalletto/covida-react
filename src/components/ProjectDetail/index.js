@@ -6,7 +6,7 @@ import { faFacebookF, faTwitter, faWhatsapp, faInstagram } from "@fortawesome/fr
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Fade from 'react-reveal/Fade';
 
-import "./styles.css";
+import "./styles.scss";
 
 library.add(fas, faFacebookF, faTwitter, faWhatsapp, faInstagram );
 

@@ -1,20 +1,20 @@
-.modal-container {
-  background: rgba(54, 54, 54, 0.9);
+@import '../../variables';
+
+#modal-form-container {
   color: #1F5A66;
   overflow-y: auto;
   margin-right: 5px;
-  margin-top: 1rem;
 }
 
-.modal-container .modal-header {
+#modal-form-container .modal-header {
   border-bottom: none;
 }
 
-.modal-body {
+#modal-form-container .modal-body {
   padding: 0px 60px 40px 60px;
 }
 
-.modal-container h3{
+#modal-form-container h3{
   font-family: 'Spectral';
   font-style: normal;
   font-weight: bold;
@@ -23,7 +23,7 @@
   letter-spacing: -0.02em;
 }
 
-.modal-container p {
+#modal-form-container p {
   font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: normal;
@@ -51,7 +51,7 @@
 }
 
 .main-btn {
-  background: #FF9966;
+  background: $main_orange;
   color: white !important;
 }
 
@@ -61,13 +61,13 @@
   border-color: #2E8799;
 }
 
-.section {
+#modal-form-container .section {
   padding-top: 30px;
   color: #1F5A66;
   text-align: justify
 }
 
-.form-input {
+#modal-form-container .form-input {
   padding-left: 10px;
   margin-top: 0px;
   width: 100%;
@@ -81,7 +81,7 @@
   height: 150px;
 }
 
-.row {
+#modal-form-container .row {
   display: flex;
   flex: 1;
   margin-left: auto

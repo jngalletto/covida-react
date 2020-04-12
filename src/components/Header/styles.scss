@@ -1,3 +1,22 @@
+@import '../../variables.scss';
+
+#breadcumb-container-co .breadcrumb-item{
+  font-family: $spectral;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: -0.02em;
+}
+
+#breadcumb-container-co li {
+  color: $main_color !important;
+}
+
+#breadcumb-container-co li .active{
+  color: #A3C5CC !important;
+}
+
 .headerTitle {
   color: #0833f3;
   float: left;
@@ -5,13 +24,17 @@
   font-weight: bold;
 }
 
+#header-logo {
+  font-size: 30px;
+}
+
 .helpButton {
   float: right;
   margin-right: 40px !important;
   color: #ffffff !important; 
-  background-color: #0833f3 !important; 
-  width: 100px;
+  background-color: $main_color !important; 
   font-weight: bold !important;
+  min-width: 250px;
 }
 
 .link-container {
@@ -20,13 +43,18 @@
 }
 
 .link-container .nav-link {
-  color: #0080FF !important;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: $plex;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.02em;
-
+  color: #1F5A66 !important;
 }
+
+.link-container .nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+

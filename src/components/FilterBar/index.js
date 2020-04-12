@@ -5,7 +5,7 @@ import SectionContainer from '../SectionContainer';
 import { fetchAll as fetchAllZones } from '../../api/zone';
 import { fetchAll as fetchAllSections } from '../../api/section';
 
-import "./styles.css";
+import "./styles.scss";
 
 class FilterBar extends Component {
   constructor(props) {
@@ -43,20 +43,24 @@ class FilterBar extends Component {
     const { sections, zones } = this.state;
     const { onChangeZone, onChangeSection } = this.props;
     return(
+      <>
       <div className="row filter-bar">
-        <div className="col-sm-12 col-md-2">
-          <DropdownZone 
-            onChange={ onChangeZone }
-            zones={zones}
-          />
-        </div>
-        <div className="col-sm-12 col-md-8">
+        <div className="col-sm-12 col-md-12">
           <SectionContainer 
             onChange={ onChangeSection }
             sections={sections}
           />
         </div>
       </div>
+      <div className="row">
+        <div className="col-sm-12 col-md-2">
+          <DropdownZone 
+            onChange={ onChangeZone }
+            zones={zones}
+          />
+        </div>
+      </div>
+      </>
     )
   }
 }

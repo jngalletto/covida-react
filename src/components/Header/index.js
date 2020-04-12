@@ -33,7 +33,7 @@ class Header extends Component {
     return (
       <>
       <nav className="navbar navbar-expand-lg navbar-light">
-        <Link className="navbar-brand" to="/"><p className="logo-font">entretodos.org</p></Link>
+        <Link className="navbar-brand" to="/"><p id="header-logo" className="logo-font">nosayudamosentretodos.org</p></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -64,7 +64,7 @@ class Header extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-8">
-            <nav aria-label="breadcrumb">
+            <nav id="breadcumb-container-co" aria-label="breadcrumb ">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><Link to="/">Home</Link></li>
                 <li class="breadcrumb-item active" aria-current="page">Necesito ayuda</li>
@@ -72,7 +72,7 @@ class Header extends Component {
             </nav>
           </div>
           <div className="col-sm-12 col-md-4">
-            <a className="btn btn-main-action" onClick={this.renderForm}><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
+            <a className="btn helpButton" onClick={this.renderForm}><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
           </div>
           <ProjectForm
             display={displayProjectForm}

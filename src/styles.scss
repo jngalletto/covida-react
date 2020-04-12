@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
 @import './variables.scss';
 
 html {
@@ -12,7 +12,7 @@ p, h1, h2, h3, h4, a, li, button, option, select, input {
 }
 
 h5, h6 {
-  color: #1F5A66;
+  color: $info_color;
   font-family: 'Spectral', serif;
 }
 
@@ -24,6 +24,16 @@ h5, h6 {
 .btn-main-action {
     background: $main_orange;
     color: white !important;
+}
+
+.form-input, select{
+    padding-left: 10px;
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #A3C5CC;
+    box-sizing: border-box;
+    height: 60px;
 }
 
 .logo-font {

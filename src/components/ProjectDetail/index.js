@@ -16,19 +16,19 @@ const ProjectDetail = (props) => {
   const renderSocialIcons = () => (
     <>
         <span className="fa-layers fa-fw social-icon">
-          <FontAwesomeIcon icon="circle" color="#0080FF" size="lg" />
+          <FontAwesomeIcon icon="circle" color="#1F5A66" size="lg" />
           <FontAwesomeIcon icon={['fab', 'facebook-f']} color="white" transform="shrink-3" />
         </span>
         <span className="fa-layers fa-fw social-icon">
-          <FontAwesomeIcon icon="circle" color="#0080FF" size="lg" />
+          <FontAwesomeIcon icon="circle" color="#1F5A66" size="lg" />
           <FontAwesomeIcon icon={['fab', 'twitter']} color="white" transform="shrink-3" />
         </span>
         <span className="fa-layers fa-fw social-icon">
-          <FontAwesomeIcon icon="circle" color="#0080FF" size="lg" />
+          <FontAwesomeIcon icon="circle" color="#1F5A66" size="lg" />
           <FontAwesomeIcon icon={['fab', 'whatsapp']} color="white" transform="shrink-3" />
         </span>
         <span className="fa-layers fa-fw social-icon">
-          <FontAwesomeIcon icon="circle" color="#0080FF" size="lg" />
+          <FontAwesomeIcon icon="circle" color="#1F5A66" size="lg" />
           <FontAwesomeIcon icon={['fab', 'instagram']} color="white" transform="shrink-3" />
         </span>
       </>
@@ -114,9 +114,9 @@ const ProjectDetail = (props) => {
                     <h3>Contacto</h3>
                   </div>
                   <div className="col-sm-12">
-                    <p><FontAwesomeIcon icon="phone" color="#0080FF" size="md" />  { project && project.phone }</p>
-                    <p><FontAwesomeIcon icon="envelope" color="#0080FF" size="md" />  { project && project.email }</p>
-                    <p><FontAwesomeIcon icon="globe" color="#0080FF" size="md" />  { project && project.website }</p>
+                    <p><FontAwesomeIcon icon="phone" size="md" />  { project && project.phone }</p>
+                    <p><FontAwesomeIcon icon="envelope" size="md" />  { project && project.email }</p>
+                    <p><FontAwesomeIcon icon="globe" size="md" />  { project && project.website }</p>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@ const Home = () => {
     <>
       <div id="home-main" className="text-center home-section">
         <div className="col-sm-12 logo-container">
-          <p className="logo-font">entretodos.org</p>
+          <p className="logo-font">nosayudamosentretodos.org</p>
         </div>
         <div className="col-sm-12">
           <p className="main-content">¿Cómo podemos ayudarnos?</p>

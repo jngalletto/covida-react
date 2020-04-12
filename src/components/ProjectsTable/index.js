@@ -3,7 +3,7 @@ import equal from 'fast-deep-equal'
 import ProjectCard from '../ProjectCard';
 import { fetchFiltered } from '../../api/project';
 
-import "./styles.css";
+import "./styles.scss";
 
 class ProjectsTable extends Component {
   constructor(props){

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./styles.scss";
 
 const DropdownZone = (props) => {
   const renderZones = () => {
@@ -12,7 +12,7 @@ const DropdownZone = (props) => {
   }
 
   return (
-    <select className="form-control" onChange={ (e) => props.onChange(e.target.value) }>
+    <select className="form-control form-input" onChange={ (e) => props.onChange(e.target.value) }>
       <option value='null'>Ubicación</option>
       { renderZones() }
     </select>

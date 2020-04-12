@@ -1,14 +1,16 @@
+@import '../../variables.scss';
+
 .card-body {
   padding: 0.8rem 1rem 0.2rem 1rem !important;
 }
 
-.card-body :hover {
+.card-body:hover {
   cursor: pointer;
 }
 
 .card-container-co {
   border-radius: 10px;
-  border-color: #0080FF;
+  border-color: $main_color;
   margin-right: 0.5rem;
   margin-top: 1rem;
   width: 21rem;
@@ -19,7 +21,8 @@
 }
 
 .card-data-container p{
-  font-family: 'IBM Plex Sans';
+  color: #1F5A66;
+  font-family: $plex;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;

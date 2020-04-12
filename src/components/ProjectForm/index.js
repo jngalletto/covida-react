@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles.css";
+import "./styles.scss";
 
 class ProjectForm extends Component {
   onSend = () => {
@@ -8,7 +8,7 @@ class ProjectForm extends Component {
   render () {
     const { onClose, display } = this.props;
     return (
-      <div className="modal modal-container" tabindex="-1" role="dialog" style={{ display: display ? 'block' : 'none'}}>
+      <div id="modal-form-container" className="modal modal-container" tabindex="-1" role="dialog" style={{ display: display ? 'block' : 'none'}}>
         <div className="modal-dialog modal-lg" role="document">
           <div className="modal-content">
             <div className="modal-header">

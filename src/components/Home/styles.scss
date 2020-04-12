@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.home-section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+#home-main .logo-container {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+#home-main .sub-text-container {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+
+.action-recent-container {
+    bottom: 0;
+    padding-bottom: 2rem;
+    position: absolute;
+}
+
+.action-recent-container .sub-text{
+    color: $secundary_color;
+    font-family: $plex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.action-container {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.btn-home {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    margin-left: 4rem;
+    padding: 1rem 3rem;
+}
+
+.btn-home:hover{
+    background: $main_color;
+}
+
+.main-content {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 80px;
+    line-height: 112%;    
+    letter-spacing: -0.03em;
+}
+
+.sub-text {
+    font-family: $plex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    margin: auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+

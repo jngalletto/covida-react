@@ -8,7 +8,7 @@ class ProjectForm extends Component {
   render () {
     const { onClose, display } = this.props;
     return (
-      <div id="modal-form-container" className="modal modal-container" tabindex="-1" role="dialog" style={{ display: display ? 'block' : 'none'}}>
+      <div id="modal-form-container" className="modal modal-container" role="dialog" style={{ display: display ? 'block' : 'none'}}>
         <div className="modal-dialog modal-lg" role="document">
           <div className="modal-content">
             <div className="modal-header">
@@ -31,17 +31,17 @@ class ProjectForm extends Component {
               </p>
               <div className="section">
                 <h5>Nombre o título de la iniciativa</h5>
-                <input className="form-input" type="text" id="fname" placeholder="Ej. Iniciativa uruguay" name="fname"/>
+                <input className="form-input" type="text" placeholder="Ej. Iniciativa uruguay" name="fname"/>
               </div>
 
               <div className="section">
                 <h5>Descripción o información adicional</h5>
-                <input className="large-txt form-input " type="text" id="fname" placeholder="Lorem ipsum" name="fname"/>
+                <input className="large-txt form-input " type="text" placeholder="Lorem ipsum" name="fname"/>
               </div>
 
               <div className="section">
                 <h5>Formas de colaborar con la iniciativa</h5>
-                <input className="large-txt form-input" type="text" id="fname" placeholder="Lorem ipsum" name="fname"/>
+                <input className="large-txt form-input" type="text" placeholder="Lorem ipsum" name="fname"/>
               </div>
 
               <div className="section">
@@ -50,24 +50,24 @@ class ProjectForm extends Component {
 
               <div className="section">
                 <h5>WEB (Si aplica o Grupo de Facebook, Instagram, etc)</h5>
-                <input className="form-input" type="text" id="fname" placeholder="Ej. www.tuweb.com.uy" name="fname"/>
+                <input className="form-input" type="text" placeholder="Ej. www.tuweb.com.uy" name="fname"/>
               </div>
 
               <div className="section">
               <h5>Información de contacto</h5>
                 <h6>Ubicación</h6>
-                <input className="form-input" type="text" id="fname" placeholder="Dr. Fulano de Tal 1234" name="fname"/>
+                <input className="form-input" type="text" placeholder="Dr. Fulano de Tal 1234" name="fname"/>
               </div>
 
               <div className="row">
                 <div className="section">
                   <h6>Teléfono</h6>
-                  <input className="form-input" type="text" id="fname" placeholder="(2) 123 45 67" name="fname"/>
+                  <input className="form-input" type="text" placeholder="(2) 123 45 67" name="fname"/>
                 </div>
 
                 <div className="section">
                   <h6>e-mail</h6>
-                  <input className="form-input" type="text" id="fname" placeholder="tuemail@gmail.com" name="fname"/>
+                  <input className="form-input" type="text" placeholder="tuemail@gmail.com" name="fname"/>
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ class ProjectForm extends Component {
 
               <div className="section">
                 <h6>Nombre del responsable</h6>
-                <input className="form-input" type="text" id="fname" placeholder="Tu nombre" name="fname"/>
+                <input className="form-input" type="text" placeholder="Tu nombre" name="fname"/>
               </div>
 
               <p className="section">

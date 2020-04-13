@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import queryString from 'query-string';
+import { withRouter } from 'react-router-dom';
 import {
   Link
 } from "react-router-dom";
@@ -16,7 +18,18 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayProjectForm: false
+      displayProjectForm: false,
+      requestHelp: true
+    }
+  }
+
+  componentDidMount() {
+    const { location } = this.props;
+    const query = queryString.parse(location.search);
+    if (query.q && query.q === 'quiero-ayudar') {
+      this.setState({
+        requestHelp: false
+      })
     }
   }
 
@@ -26,6 +39,18 @@ class Header extends Component {
 
   onCloseForm = () => {
     this.setState({ displayProjectForm: false })
+  }
+
+  renderActionButton () {
+    const { requestHelp } = this.state;
+    if (requestHelp) {
+      return (
+        <button className="btn actionButton emergencyButton"><FontAwesomeIcon icon="exclamation" color="white" /> Emergencias</button>
+      )
+    }
+    return(
+      <button className="btn actionButton requestButton" onClick={this.renderForm}><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</button>
+    )
   }
 
   render() {
@@ -65,14 +90,14 @@ class Header extends Component {
         <div className="row">
           <div className="col-sm-12 col-md-8">
             <nav id="breadcumb-container-co" aria-label="breadcrumb ">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                <li class="breadcrumb-item active" aria-current="page">Necesito ayuda</li>
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                <li className="breadcrumb-item active" aria-current="page">Necesito ayuda</li>
               </ol>
             </nav>
           </div>
           <div className="col-sm-12 col-md-4">
-            <a className="btn helpButton" onClick={this.renderForm}><FontAwesomeIcon icon="plus" color="white" /> Sumar iniciativa de ayuda</a>
+            { this.renderActionButton() }
           </div>
           <ProjectForm
             display={displayProjectForm}
@@ -85,4 +110,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

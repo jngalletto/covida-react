@@ -28,13 +28,20 @@
   font-size: 30px;
 }
 
-.helpButton {
+.actionButton {
   float: right;
   margin-right: 40px !important;
   color: #ffffff !important; 
-  background-color: $main_color !important; 
   font-weight: bold !important;
   min-width: 250px;
+}
+
+.emergencyButton {
+  background-color: #FF6866 !important;
+}
+
+.requestButton {
+  background-color: $main_color !important;
 }
 
 .link-container {

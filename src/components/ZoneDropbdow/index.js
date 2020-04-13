@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
-const DropdownZone = (props) => {
+const ZoneDropdown = (props) => {
   const renderZones = () => {
     const { zones } = props;
     if (zones) {
@@ -19,4 +19,4 @@ const DropdownZone = (props) => {
   );
 }
 
-export default DropdownZone;
+export default ZoneDropdown;

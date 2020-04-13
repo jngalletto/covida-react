@@ -22,8 +22,8 @@ const Home = () => {
           <p className="main-content">¿Cómo podemos ayudarnos?</p>
         </div>
         <div className="col-sm-12 action-container">
-          <Link className="btn btn-light btn-main-action btn-home" to="/feed">Necesito ayuda</Link>
-          <Link className="btn btn-light btn-main-action btn-home" to="/feed">Quiero ayudar</Link>
+          <Link className="btn btn-light btn-main-action btn-home" to="/feed?q=necesito-ayuda">Necesito ayuda</Link>
+          <Link className="btn btn-light btn-main-action btn-home" to="/feed?q=quiero-ayudar">Quiero ayudar</Link>
         </div>
         <div className="col-sm-12 sub-text-container">
           <p className="sub-text">Conectamos a quienes necesitan ayuda con las organizaciones y personas que están ayudando.</p>

@@ -64,7 +64,7 @@ const ProjectDetail = (props) => {
 
   return (
     // <Fade bottom>
-      <div className="modal modal-container" tabindex="-1" role="dialog" style={{ display: display ? 'block' : 'none'}}>
+      <div className="modal modal-container" role="dialog" style={{ display: display ? 'block' : 'none'}}>
         <div className="modal-dialog modal-lg" role="document">
           <div className="modal-content">
             <div className="modal-header">
@@ -76,10 +76,10 @@ const ProjectDetail = (props) => {
               {/* Name of project and social networks */}
               <div className="col-sm-12">
                 <div className="row">
-                  <div className="col-md-8">
+                  <div className="col-sm-8">
                     <h1>{ project && project.name }</h1>
                   </div>
-                  <div className="col-md-4 text-right" style={{ marginTop: 10 }}>
+                  <div className="col-sm-4 text-right" style={{ marginTop: 10 }}>
                     { renderSocialIcons() }
                   </div>
                 </div>
@@ -87,14 +87,14 @@ const ProjectDetail = (props) => {
               {/* Schedule */}
               <div className="col-sm-12 schedule-container">
                 <div className="row">
-                  <div className="col-sm-4"><p> <FontAwesomeIcon icon="calendar" size="md"/>  { project && project.daysService} </p></div>
-                  <div className="col-sm-8"><p> <FontAwesomeIcon icon="clock" size="md"/>  { project && project.schedule} </p></div>
-                  <div className="col-sm-12"><p> <FontAwesomeIcon icon="map-marker-alt" size="md"/>  { project && project.referenceAddress} </p></div>
+                  <div className="col-sm-4"><p> <FontAwesomeIcon icon="calendar" size="sm"/>  { project && project.daysService} </p></div>
+                  <div className="col-sm-8"><p> <FontAwesomeIcon icon="clock" size="sm"/>  { project && project.schedule} </p></div>
+                  <div className="col-sm-12"><p> <FontAwesomeIcon icon="map-marker-alt" size="sm"/>  { project && project.referenceAddress} </p></div>
                 </div>
               </div>
               {/* Map and image */}
               <div className="row col-sm-12">
-                <div className="col-sm-12 col-md-6">
+                <div className="col-sm-12 col-sm-6">
                   <Map
                     google={props.google}
                     zoom={13}
@@ -103,7 +103,7 @@ const ProjectDetail = (props) => {
                     { getMarkerGMap(project) }
                   </Map>
                 </div>
-                <div className="col-sm-12 col-md-5 offset-md-1">
+                <div className="col-sm-12 col-sm-5 offset-sm-1">
                   <img className="rounded img-fluid" src={project && project.image} alt={ project && project.name } />
                 </div>
               </div>
@@ -114,9 +114,9 @@ const ProjectDetail = (props) => {
                     <h3>Contacto</h3>
                   </div>
                   <div className="col-sm-12">
-                    <p><FontAwesomeIcon icon="phone" size="md" />  { project && project.phone }</p>
-                    <p><FontAwesomeIcon icon="envelope" size="md" />  { project && project.email }</p>
-                    <p><FontAwesomeIcon icon="globe" size="md" />  { project && project.website }</p>
+                    <p><FontAwesomeIcon icon="phone" size="sm" />  { project && project.phone }</p>
+                    <p><FontAwesomeIcon icon="envelope" size="sm" />  { project && project.email }</p>
+                    <p><FontAwesomeIcon icon="globe" size="sm" />  { project && project.website }</p>
                   </div>
                 </div>
               </div>

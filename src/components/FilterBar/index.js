@@ -4,10 +4,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import DropdownZone from '../ZoneDropbdow';
 import CategoryDropdown from '../CategoryDropdown';
-import SectionContainer from '../SectionContainer';
 import { fetchAll as fetchAllZones } from '../../api/zone';
-import { fetchAll as fetchAllSections } from '../../api/section';
-import { fetchAll as fetchAllCategories } from '../../api/category';
+import { fetchBySection } from '../../api/category';
 
 import "./styles.scss";
 
@@ -17,20 +15,20 @@ class FilterBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      sectionSelected: null,
       categories: [],
-      sections: [],
       zones: []
     }
   }
 
   componentDidMount() {
-    this.getAllZones();
-    this.getAllSections();
     this.getAllCategories();
+    this.getAllZones();
   }
 
   getAllCategories() {
-    fetchAllCategories()
+    const { section } = this.props
+    fetchBySection(section)
       .then(response => (
         this.setState({
           categories: response.data
@@ -47,46 +45,34 @@ class FilterBar extends Component {
       ))
   }
 
-  getAllSections() {
-    fetchAllSections()
-      .then(response => (
-        this.setState({
-          sections: response.data
-        })
-      ))
-  }
-
   render() {
-    const { categories, sections, zones } = this.state;
-    const { onChangeZone, onChangeSection } = this.props;
+    const { categories, zones } = this.state;
+    const { onClickSearch, onChangeCategory, onChangeZone } = this.props;
     return(
       <>
-      <div className="row filter-bar">
-        <div className="col-sm-12 col-md-12">
-          <SectionContainer 
-            onChange={ onChangeSection }
-            sections={sections}
-          />
-        </div>
-      </div>
       <div className="row">
-      <div className="col-sm-12 col-md-5">
+        {/* <div className="col-sm-12 col-md-5">
           <input className="form-control form-input" placeholder="Busca lo que necesites"/>
-        </div>
-        <div className="col-sm-12 col-md-3">
+        </div> */}
+        <div className="col-sm-12 col-md-5">
           <CategoryDropdown 
-            onChange={ onChangeZone }
-            categories={categories}
+            onChange={ onChangeCategory }
+            categories={ categories }
           />
         </div>
-        <div className="col-sm-12 col-md-3">
+        <div className="col-sm-12 col-md-5">
           <DropdownZone 
             onChange={ onChangeZone }
-            zones={zones}
+            zones={ zones }
           />
         </div>
-        <div className="col-sm-12 col-md-1">
-          <button className="btn btnSearch"><FontAwesomeIcon icon="search" color="white" size="2x"/></button>
+        <div className="col-sm-12 col-md-2">
+          <button 
+            className="btn btnSearch" 
+            onClick={ onClickSearch }
+          >
+            <FontAwesomeIcon icon="search" color="white" size="2x"/>
+          </button>
         </div>
       </div>
       </>

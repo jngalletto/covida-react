@@ -29,19 +29,19 @@ const Home = () => {
           <p className="sub-text">Conectamos a quienes necesitan ayuda con las organizaciones y personas que están ayudando.</p>
         </div>
 
-        <div className="col-sm-12 action-recent-container">
+        {/* <div className="col-sm-12 action-recent-container">
           <p className="sub-text">VER INICIATIVAS RECIENTES</p>
           <FontAwesomeIcon icon="arrow-down" color="#A3C5CC" size="lg" />
-        </div>
+        </div> */}
       </div>
-      <div className="home-section" style={{ paddingTop:20 }}>
+      {/* <div className="home-section" style={{ paddingTop:20 }}>
         <div className="container">
           <ProjectsTable 
             section={null}
             zone={null}
           />
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

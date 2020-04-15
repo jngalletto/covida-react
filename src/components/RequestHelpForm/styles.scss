@@ -1,0 +1,78 @@
+@import '../../variables';
+
+#modal-form-container {
+  color: #1F5A66;
+  overflow-y: auto;
+  margin-right: 5px;
+}
+
+#modal-form-container .modal-header {
+  border-bottom: none;
+}
+
+#modal-form-container .modal-body {
+  padding: 0px 60px 40px 60px;
+}
+
+#modal-form-container h3{
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+}
+
+#modal-form-container p {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.form-btn {
+  border-radius: 12px;
+  font-size: 26px;
+  font-weight: bold;
+  width: 200px;
+  width: 200px;
+}
+
+.main-btn {
+  background: $main_orange;
+  color: white !important;
+}
+
+.secondary-btn {
+  background: white;
+  color: #2E8799 !important;
+  border-color: #2E8799;
+}
+
+#modal-form-container .section {
+  padding-top: 30px;
+  color: #1F5A66;
+  text-align: justify
+}
+
+.large-txt {
+  height: 150px;
+}
+
+#modal-form-container .row {
+  display: flex;
+  flex: 1;
+  margin-left: auto
+}

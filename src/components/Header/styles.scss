@@ -1,22 +1,5 @@
 @import '../../variables.scss';
 
-#breadcumb-container-co .breadcrumb-item{
-  font-family: $spectral;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 33px;
-  letter-spacing: -0.02em;
-}
-
-#breadcumb-container-co li {
-  color: $main_color !important;
-}
-
-#breadcumb-container-co li .active{
-  color: #A3C5CC !important;
-}
-
 .headerTitle {
   color: #0833f3;
   float: left;

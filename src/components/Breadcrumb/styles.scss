@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+#breadcumb-container-co .breadcrumb{
+    font-family: $spectral;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+  }
+  
+  #breadcumb-container-co .breadcrumb > li {
+    color: #A3C5CC !important;
+  }
+  
+  #breadcumb-container-co .breadcrumb > li a:hover {
+    color: $main_color;
+    text-decoration: none !important;
+  }
+  #breadcumb-container-co .breadcrumb > .active{
+    color: $main_color !important;
+    font-weight: bold;
+  }
+
+  #breadcumb-container-co .breadcrumb-item+.breadcrumb-item::before{
+    content: "\7C";
+  }

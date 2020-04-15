@@ -18,7 +18,7 @@ const SectionContainer = (props) => {
           type="button" 
           className="btn btn-outline-light section-container" 
           style={ setDynamicColor(section.color) }
-          onClick={ () => props.onChange(section._id) }
+          onClick={ () => props.onChange(section) }
         >
           {section.name}
         </button>

@@ -24,8 +24,8 @@ class ProjectsTable extends Component {
   }
 
   getAllProjects() {
-    const { section, zone } = this.props;
-    fetchFiltered(zone, section)
+    const { category, zone } = this.props;
+    fetchFiltered(zone, category)
       .then(response => {
         this.setState({
           projects: response.data

@@ -12,6 +12,7 @@ class Header extends Component {
   }
 
   render() {
+    const { renderForm } = this.props;
     return (
       <>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -37,7 +38,7 @@ class Header extends Component {
                 <Link className="nav-link" to="/">Sobre nosotros</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">Contacto</Link>
+                <p className="nav-link" onClick={ () => renderForm() }>Contacto</p>
               </li>
             </ul>
           </div>

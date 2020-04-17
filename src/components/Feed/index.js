@@ -54,7 +54,6 @@ class Feed extends Component {
         break;
     }
     this.setState(prevState => {
-
       return ({
         ...prevState,
         breadcrumbLevel: prevState.breadcrumbLevel - 1,
@@ -74,30 +73,34 @@ class Feed extends Component {
   }
 
   onChangeCategory = (category) =>  {
-    const { location } = this.props;
-    const query = queryString.parse(location.search);
-    this.setBreadcrumbOption({
-      name: category.name,
-      link: `/feed?q=${query.q}`
-    })
-    this.setState({
-      category,
-      breadcrumbLevel: 2,
-      displayFeed: true,
-    })
+    if (this.state.category === null) {
+      const { location } = this.props;
+      const query = queryString.parse(location.search);
+      this.setBreadcrumbOption({
+        name: category.name,
+        link: `/feed?q=${query.q}`
+      })
+      this.setState({
+        category,
+        breadcrumbLevel: 2,
+        displayFeed: true,
+      })
+    }
   }
 
   onChangeSection = (section) =>  {
-    const { location } = this.props;
-    const query = queryString.parse(location.search);
-    this.setBreadcrumbOption({
-      name: section.name,
-      link: `/feed?q=${query.q}`
-    })
-    this.setState({
-      breadcrumbLevel: 1,
-      section: section._id
-    })
+    if (this.state.section === null) {
+      const { location } = this.props;
+      const query = queryString.parse(location.search);
+      this.setBreadcrumbOption({
+        name: section.name,
+        link: `/feed?q=${query.q}`
+      })
+      this.setState({
+        breadcrumbLevel: 1,
+        section: section._id
+      })
+    }
   }
 
   onClickSearch = () => {
@@ -142,7 +145,9 @@ class Feed extends Component {
     return (
       <>
         <div>
-          <Header />
+          <Header 
+            renderForm={ this.renderForm }
+          />
           <div className="container">
             <div className="row">
               <div className="col-sm-4">

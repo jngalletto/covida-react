@@ -5,7 +5,7 @@ import ActionButtons from '../ActionButtons';
 import Header from '../Header';
 import ProjectsTable from "../ProjectsTable";
 import ProjectDetail from '../ProjectDetail';
-import FilterBar from '../FilterBar';
+import CategoryBar from '../CategoryBar';
 import SectionBar from '../SectionBar';
 import Breadcrumb from '../Breadcrumb';
 import ProjectForm from '../ProjectForm';
@@ -16,6 +16,7 @@ class Feed extends Component {
     super(props);
     this.state = {
       breadcrumb:[{name: 'Inicio', link: '/'}],
+      breadcrumbLevel: 0,
       category: null,
       displayProjectDetail: false,
       displayProjectForm: false,
@@ -37,16 +38,52 @@ class Feed extends Component {
     }
   }
 
+  breadcrumbGoTo = (location) => {
+    const { history } = this.props;
+    let categoryValue = this.state.category;
+    let sectionValue = this.state.section;
+    switch (this.state.breadcrumbLevel) {
+      case 2:
+        categoryValue = null;
+        break;
+      case 1: 
+        categoryValue = null;
+        sectionValue = null;
+        break;
+      default:
+        break;
+    }
+    this.setState(prevState => {
+
+      return ({
+        ...prevState,
+        breadcrumbLevel: prevState.breadcrumbLevel - 1,
+        category: categoryValue,
+        displayFeed: false,
+        section: sectionValue,
+        zone: null
+      })
+    })
+    history.push(location);
+  }
+
   onChangeZone = (zone) =>  {
-    console.log("here");
     this.setState({
       zone
     })
   }
 
   onChangeCategory = (category) =>  {
+    const { location } = this.props;
+    const query = queryString.parse(location.search);
+    this.setBreadcrumbOption({
+      name: category.name,
+      link: `/feed?q=${query.q}`
+    })
     this.setState({
-      category
+      category,
+      breadcrumbLevel: 2,
+      displayFeed: true,
     })
   }
 
@@ -58,6 +95,7 @@ class Feed extends Component {
       link: `/feed?q=${query.q}`
     })
     this.setState({
+      breadcrumbLevel: 1,
       section: section._id
     })
   }
@@ -109,6 +147,7 @@ class Feed extends Component {
             <div className="row">
               <div className="col-sm-4">
                 <Breadcrumb 
+                  goTo= { this.breadcrumbGoTo }
                   options = { breadcrumb }
                 />
               </div>
@@ -125,11 +164,9 @@ class Feed extends Component {
              />
             }
             { section && 
-              <FilterBar 
+              <CategoryBar 
                 section = { section }
-                onChangeZone = { this.onChangeZone }
-                onChangeCategory = { this.onChangeCategory }
-                onClickSearch = { this.onClickSearch }
+                onChangeSection={ this.onChangeCategory }
               />
             }
             

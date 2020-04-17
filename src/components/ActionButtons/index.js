@@ -16,7 +16,8 @@ const ActionButtons = (props) => {
     const { renderForm, requestHelp } = props;
     if (requestHelp) {
       return (
-        <button className="btn actionButton emergencyButton"><FontAwesomeIcon icon="exclamation" color="white" /> Emergencias</button>
+        // <button className="btn actionButton emergencyButton"><FontAwesomeIcon icon="exclamation" color="white" /> Emergencias</button>
+        null
       )
     }
     return(

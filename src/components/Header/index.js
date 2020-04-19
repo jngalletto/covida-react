@@ -35,7 +35,7 @@ class Header extends Component {
                 <Link className="nav-link" to="/">Quiero ayudar</Link>
               </li> */}
               <li className="nav-item">
-                <Link className="nav-link" to="/">Sobre nosotros</Link>
+                <Link className="nav-link" to="/sobre-nosotros">Sobre nosotros</Link>
               </li>
               <li className="nav-item">
                 <p className="nav-link" onClick={ () => renderForm() }>Contacto</p>

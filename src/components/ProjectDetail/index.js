@@ -94,7 +94,7 @@ const ProjectDetail = (props) => {
               </div>
               {/* Map and image */}
               <div className="row col-sm-12">
-                <div className="col-sm-12 col-sm-6">
+                <div className="col-sm-5">
                   <Map
                     google={props.google}
                     zoom={13}
@@ -103,7 +103,7 @@ const ProjectDetail = (props) => {
                     { getMarkerGMap(project) }
                   </Map>
                 </div>
-                <div className="col-sm-12 col-sm-5 offset-sm-1">
+                <div className="col-sm-6 offset-sm-1">
                   <img className="rounded img-fluid" src={project && project.image} alt={ project && project.name } />
                 </div>
               </div>

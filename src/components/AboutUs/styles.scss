@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.page-title {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 112%;
+    /* or 67px */
+    letter-spacing: -0.03em;
+}
+
+.page-content {
+    font-family: $plex;
+    font-style: normal;
+    // font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.page-content br{
+    margin-top: 10rem;
+}

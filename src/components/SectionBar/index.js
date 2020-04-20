@@ -39,6 +39,7 @@ class SectionBar extends Component {
       <>
       <div className="row filter-bar">
         <div className="col-sm-12 col-md-12">
+          <h1 className="title-section">¿Qué tipo de ayuda estás buscando?</h1>
           <SectionContainer 
             onChange={ onChangeSection }
             sections={sections}

@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
   return (
     <Fade bottom>
       <div className="card card-container-co" onClick={() => { onClick(project) }}>
-        <img src={project.image} className="card-img-top card-image-co" alt="..." />
+        <img src={project.image} className="card-img-top card-image-co img-fluid" alt={`${project.name} imagen`} />
         <div className="card-body">
           <h4 className="card-title">{ project.name }</h4>
           <p className="card-description">{ sliceDescription(project.description) }</p>

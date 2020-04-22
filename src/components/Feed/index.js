@@ -178,6 +178,7 @@ class Feed extends Component {
             { displayFeed && 
               <ProjectsTable 
                 onClickCard= { this.onClickCard }
+                requestHelp={requestHelp}
                 category={ category }
                 zone={ zone }
               />

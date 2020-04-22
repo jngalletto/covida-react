@@ -24,13 +24,14 @@ class ProjectsTable extends Component {
   }
 
   getAllProjects() {
-    const { category, zone } = this.props;
+    const { category, requestHelp, zone } = this.props;
     const categoryToFilter = category && category._id;
     const zoneToFilter = zone && zone._id;
     fetchFiltered(zoneToFilter, categoryToFilter)
       .then(response => {
+        const projects = response.data.filter(project => (project.isVerified && (project.wantsHelp === requestHelp || project.needsHelp === !requestHelp) ));
         this.setState({
-          projects: response.data
+          projects
         })
       })
   }

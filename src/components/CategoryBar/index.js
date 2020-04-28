@@ -24,7 +24,7 @@ class CategoryBar extends Component {
 
   getAllSections() {
     const { section } = this.props;
-    fetchBySection(section)
+    fetchBySection(section._id)
       .then(response => (
         this.setState({
           categories: response.data

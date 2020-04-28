@@ -18,7 +18,7 @@ class ProjectsTable extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(!equal(this.props.zone, prevProps.zone)) {
+    if(!equal(this.props.category, prevProps.category)) {
       this.getAllProjects();
     } 
   }

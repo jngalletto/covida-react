@@ -73,19 +73,17 @@ class Feed extends Component {
   }
 
   onChangeCategory = (category) =>  {
-    if (this.state.category === null) {
-      const { location } = this.props;
-      const query = queryString.parse(location.search);
-      this.setBreadcrumbOption({
-        name: category.name,
-        link: `/feed?q=${query.q}`
-      })
-      this.setState({
-        category,
-        breadcrumbLevel: 2,
-        displayFeed: true,
-      })
-    }
+    const { location } = this.props;
+    const query = queryString.parse(location.search);
+    this.setBreadcrumbOption({
+      name: category.name,
+      link: `/feed?q=${query.q}`
+    })
+    this.setState({
+      category,
+      breadcrumbLevel: 2,
+      displayFeed: true,
+    })
   }
 
   onChangeSection = (section) =>  {
@@ -98,7 +96,7 @@ class Feed extends Component {
       })
       this.setState({
         breadcrumbLevel: 1,
-        section: section._id
+        section: section
       })
     }
   }

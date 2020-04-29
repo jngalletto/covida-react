@@ -80,7 +80,7 @@ const ProjectDetail = (props) => {
                     <h1>{ project && project.name }</h1>
                   </div>
                   <div className="col-sm-4 text-right" style={{ marginTop: 10 }}>
-                    { renderSocialIcons() }
+                    {/* { renderSocialIcons() } */}
                   </div>
                 </div>
               </div>

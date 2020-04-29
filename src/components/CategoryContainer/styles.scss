@@ -1,22 +1,25 @@
 @import '../../variables.scss';
 
-.section-container {
+.category-container {
     background-color: $main_orange;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
     margin-right: 0.5rem;
     margin-top: 0.5rem;
     min-width: 15rem;
     font-family: $spectral;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 32px;
     line-height: 49px;
     /* identical to box height */
     text-align: center;
     letter-spacing: -0.02em;
+  }
+.category-container-active {
+    background-color: $main_color !important;
 }
-
-.section-container:hover {
+  
+.category-container:hover {
     background: $main_color;
     border: $main_color;
     color: white !important;

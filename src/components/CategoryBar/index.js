@@ -34,7 +34,7 @@ class CategoryBar extends Component {
 
   render() {
     const { categories } = this.state;
-    const { onChangeSection } = this.props;
+    const { actualCategory, onChangeSection } = this.props;
     return(
       <>
       <div className="row filter-bar">
@@ -42,6 +42,7 @@ class CategoryBar extends Component {
           <CategoryContainer 
             onChange={ onChangeSection }
             categories={ categories }
+            actualCategory= { actualCategory }
           />
         </div>
       </div>

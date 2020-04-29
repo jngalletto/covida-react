@@ -11,15 +11,15 @@ class AboutUs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      breadcrumb:[{name: 'Inicio', link: '/'}, {name: 'Sobre nosotros', link: '/'}],
+      breadcrumb:[{ name: 'Inicio', link: '/', type: 'home' }, { name: 'Sobre nosotros', link: '/', type: 'page' }],
       breadcrumbLevel: 0,
       displayProjectForm: false,
     }
   }
 
-  breadcrumbGoTo = (location) => {
+  breadcrumbGoTo = (option) => {
     const { history } = this.props;
-    history.push(location);
+    history.push(option.link);
   }
 
   onCloseDetail = () => {
@@ -36,15 +36,6 @@ class AboutUs extends Component {
     this.setState({ displayProjectForm: true })
   }
 
-  setBreadcrumbOption = (option) => {
-    this.setState(prevState => ({
-      ...prevState,
-      breadcrumb: [
-        ...prevState.breadcrumb,
-        option
-      ]
-    }))
-  }
 
   render () {
     const { breadcrumb, displayProjectForm } = this.state;

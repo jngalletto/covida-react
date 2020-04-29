@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
 @import './variables.scss';
 
-html {
-    scroll-snap-type: y mandatory;
-}
-
 p, h1, h2, h3, h4, a, li, button, option, select, input {
     color: $main_color;
     font-family: 'Spectral', serif;

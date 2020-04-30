@@ -75,7 +75,6 @@ class Feed extends Component {
         }, () => this.updateBreadcrumb())
         break;
       case 'section':
-        console.log("SECTION")
         this.setState({
           category: null,
           displayFeed: false,

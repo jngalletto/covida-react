@@ -76,7 +76,7 @@ const ProjectDetail = (props) => {
               {/* Name of project and social networks */}
               <div className="col-sm-12">
                 <div className="row">
-                  <div className="col-sm-8">
+                  <div className="col-sm-12">
                     <h1>{ project && project.name }</h1>
                   </div>
                   <div className="col-sm-4 text-right" style={{ marginTop: 10 }}>

@@ -29,7 +29,7 @@ class ProjectsTable extends Component {
     const zoneToFilter = zone && zone._id;
     fetchFiltered(zoneToFilter, categoryToFilter)
       .then(response => {
-        const projects = response.data.filter(project => (project.isVerified && (project.wantsHelp === requestHelp || project.needsHelp === !requestHelp) ));
+        const projects = response.data.filter(project => (project.isVerified && (project.needsHelp === requestHelp) ));
         this.setState({
           projects
         })

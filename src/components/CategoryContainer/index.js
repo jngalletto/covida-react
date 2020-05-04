@@ -4,9 +4,12 @@ import "./styles.scss";
 const CategoryContainer = (props) => {
 
   const renderCategory = () => {
-    const { actualCategory, categories, onChange } = props;
-    if (categories.length !== 0) {
-      return categories.map(category => {
+    const { actualCategory, categories, onChange, requestHelp } = props;
+    const filteredCategories = categories.filter(category => (
+      requestHelp ? category.needsHelp : category.wantsToHelp
+    ));
+    if (filteredCategories.length !== 0) {
+      return filteredCategories.map(category => {
         let classNames = 'btn btn-outline-light category-container';
         if (actualCategory && actualCategory._id === category._id) {
           classNames += ' category-container-active';

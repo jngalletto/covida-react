@@ -11,10 +11,12 @@ library.add(fas);
 
 class CategoryBar extends Component {
   constructor(props) {
+    const { requestHelp } = props;
     super(props);
     this.state = {
       sectionSelected: null,
       categories: [],
+      requestHelp: requestHelp,
     }
   }
 
@@ -33,7 +35,7 @@ class CategoryBar extends Component {
   }
 
   render() {
-    const { categories } = this.state;
+    const { categories, requestHelp } = this.state;
     const { actualCategory, onChangeSection } = this.props;
     return(
       <>
@@ -42,7 +44,8 @@ class CategoryBar extends Component {
           <CategoryContainer 
             onChange={ onChangeSection }
             categories={ categories }
-            actualCategory= { actualCategory }
+            actualCategory={ actualCategory }
+            requestHelp={ requestHelp }
           />
         </div>
       </div>

@@ -148,14 +148,14 @@ class Feed extends Component {
             <div className="row">
               <div className="col-sm-8">
                 <Breadcrumb 
-                  goTo= { this.breadcrumbGoTo }
-                  options = { breadcrumb }
+                  goTo={ this.breadcrumbGoTo }
+                  options={ breadcrumb }
                 />
               </div>
               <div className="col-sm-4">
                 <ActionButtons 
-                  requestHelp = { requestHelp }
-                  renderForm = { this.renderForm }
+                  requestHelp={ requestHelp }
+                  renderForm={ this.renderForm }
                 />
               </div>
             </div>
@@ -166,15 +166,16 @@ class Feed extends Component {
             }
             { section && 
               <CategoryBar 
-                actualCategory = { category }
-                section = { section }
+                actualCategory={ category }
+                section={ section }
                 onChangeSection={ this.onChangeCategory }
+                requestHelp={ requestHelp }
               />
             }
             
             { displayFeed && 
               <ProjectsTable 
-                onClickCard= { this.onClickCard }
+                onClickCard={ this.onClickCard }
                 requestHelp={requestHelp}
                 category={ category }
                 zone={ zone }
